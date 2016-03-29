@@ -1,0 +1,16 @@
+@startuml
+
+title Draw a windmil
+
+start
+
+while (Is it a windmil?) is (No)
+	: Draw a 'Giyuk'(fd100,right90);
+	: Get size bigger;
+endwhile (yes)
+
+:Done!;
+
+stop
+
+@enduml
