@@ -1,0 +1,17 @@
+@startuml
+
+title Drawing a triangle (typing only) 
+
+
+start
+
+: 'blank' * (nMax-i) ;
+
+: '*' * i;
+
+: '*' * (i-1);
+
+:Done!;
+stop
+
+@enduml
