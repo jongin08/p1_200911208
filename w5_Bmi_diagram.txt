@@ -1,0 +1,17 @@
+@startuml
+start
+:Enter your weight;
+:Enter your height;
+:BMI is Weight/(height*height);
+if (Bmi<=18.5)
+    :Print "Underweight";
+elseif(18.5<=Bmi<25)
+    :print "Normal weight";
+elseif(25<=Bmi<30)
+    :print "Overweight";
+elseif(30<Bmi)
+    :print "Obese";
+endif
+:print result;
+stop
+@enduml
