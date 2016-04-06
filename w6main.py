@@ -19,7 +19,7 @@ def a():
         
 
 def lab6():
-    m35()
+    print m35()
     a()
     
 def main():
