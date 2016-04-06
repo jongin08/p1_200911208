@@ -1,0 +1,7 @@
+repeat
+if(i is divided by 3 or 5)
+:add i to sum;
+endif
+
+repeat while(0<i<1000)
+:print sum;
