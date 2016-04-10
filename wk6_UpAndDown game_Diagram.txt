@@ -1,0 +1,23 @@
+
+@startuml
+
+title Up and Down Game
+
+
+start
+:Make a random number(N1);
+while (Enter a number(N2))
+    fork
+        :N1>N2;
+        :Up;
+    fork again 
+        :N1<N2;
+        :Down;
+        end fork
+endwhile (N1 = N2)
+
+:Good!;
+
+stop
+
+@enduml
