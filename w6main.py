@@ -19,9 +19,9 @@ def m35():
 def a():
     year = float(input("year:"))
     if(year%4==0)and(year%100!=0 or year%400==0):
-        print "Good"
+        print "Good! It is a leap year."
     else:
-        print "Yes it is a leap year"
+        print "It is not a leap year."
 
 def UpAndDown():
     num1=random.randrange(0,100)
