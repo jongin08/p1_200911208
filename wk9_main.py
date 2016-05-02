@@ -2,6 +2,7 @@
 
 import matplotlib
 import matplotlib.pyplot as plt
+d=dict()
 
 def charCount():
     word=raw_input("")
@@ -22,7 +23,7 @@ def graph():
     
     
 def lab9():
-    d=dict()
+    
     charCount()
     graph()
 def main():
