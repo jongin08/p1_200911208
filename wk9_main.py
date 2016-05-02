@@ -14,7 +14,7 @@ def charCount():
     print d
     
 
-def graph(charCount):
+def graph():
 
     plt.bar(range(len(d)),d.values(),align='center')
     plt.xticks(range(len(d)),list(d.keys()))
@@ -24,7 +24,7 @@ def graph(charCount):
 def lab9():
     d=dict()
     charCount()
-    graph(charCount)
+    graph()
 def main():
     lab9()
     
