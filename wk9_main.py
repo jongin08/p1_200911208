@@ -1,11 +1,10 @@
-﻿%matplotlib inline
+%matplotlib inline
 
 import matplotlib
 import matplotlib.pyplot as plt
 d=dict()
 
-def charCount():
-    word=raw_input("")
+def charCount(word):
 
     for c in word:
         if c not in d:
@@ -23,8 +22,8 @@ def graph():
     
     
 def lab9():
-    
-    charCount()
+    word='sangmyung university'
+    charCount(word)
     graph()
 def main():
     lab9()
