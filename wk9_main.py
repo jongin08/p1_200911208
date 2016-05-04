@@ -1,5 +1,6 @@
 %matplotlib inline
 
+import math
 import matplotlib
 import matplotlib.pyplot as plt
 d=dict()
@@ -80,10 +81,29 @@ def friend_and_I():
     print "========="
     
     
+def minDistance():
+    #각 역들 위치 광화문,안국,시청,독립,종각
+    aa=[(37.571589, 126.976602),
+        (37.576459, 126.985271),
+        (37.565737, 126.977154),
+        (37.574512, 126.957934),
+        (37.570155, 126.982749 )]
+    
+    #경복궁위치
+    bb=[(37.575756, 126.973287)]  
+
+    
+    distance=[]
+    for i in range(1,len(aa)):
+        distance.append(math.sqrt((bb[0][1]-aa[i][1])**2+(bb[0][1]-aa[i][1])**2))
+    print min(distance)                    
+
+    
 def lab9():
     CC()
     AD()
     friend_and_I()
+    minDistance()
     
 def main():
     lab9()
