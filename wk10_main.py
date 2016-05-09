@@ -46,5 +46,6 @@ def lab10():
 def main():
     lab10()
     
+    
 if __name__=="__main__":
     main()
