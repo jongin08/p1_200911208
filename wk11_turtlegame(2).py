@@ -1,4 +1,4 @@
-﻿import turtle
+import turtle
 import math
 
 wn=turtle.Screen()
@@ -11,7 +11,11 @@ t2=turtle.Turtle()
 
 t3=turtle.Turtle()
 
+t4=turtle.Turtle()
+
 coord=[(200,100),(300,200)]
+
+line=[(200,-110),(300,-90)]
 
 radius=50
 
@@ -39,6 +43,12 @@ def Circle():
     t3.write(t1.pos())
     t3.hideturtle()
 
+def Line():
+    t4.penup()
+    t4.goto(200,-100)
+    t4.pendown()
+    t4.fd(100)
+    t4.hideturtle()
     
 def turnright():
     t1.right(45)
@@ -49,7 +59,7 @@ def turnleft():
 def keyup():
     pt=t1.pos()
     t1.fd(50)
-    if isInRectangle(pt, coord)or isInCircle(pt, radius, circlePos):
+    if isInRectangle(pt, coord)or isInCircle(pt, radius, circlePos) or isOnLine(pt,line):
         t1.write("Good!")
     
 def turnback():
@@ -58,12 +68,14 @@ def turnback():
 def mousegoto(x,y):
     t1.setpos(x,y)
     pt=t1.pos()
-    if isInRectangle(pt, coord)or isInCircle(pt, radius, circlePos):
+    if isInRectangle(pt, coord)or isInCircle(pt, radius, circlePos)or isOnLine(pt,line):
         t1.write("Good!")
     
 
 def keybye():
     wn.bye()
+    
+    
     
 def isInRectangle(curpos,coord):
     xs=coord[0][0]
@@ -86,6 +98,21 @@ def isInCircle(curpos, radius, pos):
     else:
         return False
 
+def isOnLine(curpos,line):
+    xs=line[0][0]
+    xe=line[1][0]
+    ys=line[0][1]
+    ye=line[1][1]
+    if xs < xe and ys < ye:
+        return xs <= curpos[0] <= xe and ys <= curpos[1] <= ye
+    elif xs > xe and ys < ye:
+        return xe <= curpos[0] <= xs and ye <= curpos[1] <= ys
+    elif xs < xe and ys > ye:
+        return xs <= curpos[0] <= xe and ys <= curpos[1] <= ys
+    else:
+        return xe <= curpos[0] <= xs and ys <= curpos[1] <= ye
+    
+    
 def addkeys():
     wn.onkey(turnright,"Right")
     wn.onkey(turnleft,"Left")
@@ -100,6 +127,7 @@ def addmouse():
 
 
 def lab11():
+    Line()
     Rectangle()
     Circle()
     addkeys()
