@@ -25,6 +25,7 @@ stadium.hideturtle()
 
 
 
+
 #플레이를 할 거북이를 만듬
 player = turtle.Turtle()
 player.color("blue")
